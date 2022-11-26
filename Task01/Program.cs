@@ -19,6 +19,7 @@ if(number <= 0) {
 }
 
 String[] stringArray = new String[number];
+int stringLength = 3;
 int size = 0;
 Console.WriteLine("Введите строки: ");
 for (int i = 0; i < stringArray.Length; i++)
@@ -26,7 +27,7 @@ for (int i = 0; i < stringArray.Length; i++)
     Console.Write($"Строка {i} : ");
     stringArray[i] = Console.ReadLine();
 
-    if (stringArray[i].Length <= 3)
+    if (stringArray[i].Length <= stringLength)
     {
         size++;
     }
@@ -46,10 +47,11 @@ else
 
 String[] CreateNewArray(String[] stringMyArray, String[] newMyArray)
 {
+    
     int j = 0;
     for (int i = 0; i < stringMyArray.Length; i++)
     {
-        if (stringMyArray[i].Length <= 3)
+        if (stringMyArray[i].Length <= stringLength)
         {
             while (j < newMyArray.Length)
             {
