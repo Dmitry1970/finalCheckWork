@@ -13,7 +13,8 @@
 
 Console.Write("Введите количество строк в массиве: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(number <= 0) {
+if (number <= 0)
+{
     Console.WriteLine("Вы ввели неправильное число. Введите число больше 0");
     Environment.Exit(0);
 }
@@ -40,25 +41,21 @@ if (size == 0)
 else
 {
     String[] newArray = new String[size];
-    CreateNewArray(stringArray, newArray); 
+    CreateNewArray(stringArray, newArray);
     PrintArray(newArray);
 }
 
 
 String[] CreateNewArray(String[] stringMyArray, String[] newMyArray)
 {
-    
+
     int j = 0;
     for (int i = 0; i < stringMyArray.Length; i++)
     {
         if (stringMyArray[i].Length <= stringLength)
         {
-            while (j < newMyArray.Length)
-            {
-                newMyArray[j] = stringMyArray[i];                
-                j++;
-                break;
-            }
+            newMyArray[j] = stringMyArray[i];
+            j++;
         }
     }
 
